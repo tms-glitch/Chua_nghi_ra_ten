@@ -32,7 +32,7 @@ function respond(isJoin) {
 
     message.textContent = isJoin
         ? "Hẹn gặp bạn hôm đó nha 💖"
-        : "Bạn đã phản hồi lời mời thành công 🤍";
+        : "Bạn đã nhận lời mời thành công (ง •_•)ง";
 
     message.classList.add("show");
 
