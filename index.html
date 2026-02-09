@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thiệp mời chụp kỷ yếu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hiệu ứng rơi -->
+    <div class="falling-container"></div>
+
+    <div class="card">
+        <p class="small">(｡･∀･)ﾉﾞ</p>
+        <h1>Thiệp Mời Chụp Kỷ Yếu</h1>
+        <p class="subtitle">Một chút thanh xuân, một đời kỷ liệm :))</p>
+
+        <div class="divider">＊ ＊ ＊</div>
+
+        <!-- Thông tin gửi -->
+        <p class="small"><strong>💌 Gửi bạn:</strong> Kiều Ngọc</p>
+
+        <div class="info">
+            <p>🎓 <strong>Lớp:</strong> 12 Tin - Phòng 303C</p>
+            <p>📅 <strong>Thời gian:</strong> 09h00 – 12/02/2026</p>
+            <p>📍 <strong>Địa điểm:</strong> Trường THPT Chuyên Lào Cai</p>
+            <p>🎓 <strong>Người mời:</strong> Trần Mạnh Sơn</p>
+        </div>
+
+        <div class="divider">＊ ＊ ＊</div>
+
+        <h3>⏳ Đếm ngược</h3>
+        <div id="countdown">(๑•̀ㅂ•́)و✧</div>
+
+        <!-- Nút hành động -->
+        <div class="buttons">
+            <button id="joinBtn" onclick="respond(true)">Tớ sẽ tham gia</button>
+            <button id="rejectBtn" class="reject" onclick="respond(false)">Tớ xin từ chối</button>
+        </div>
+
+        <p id="message"></p>
+        <p class="small">(～￣▽￣)～</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
