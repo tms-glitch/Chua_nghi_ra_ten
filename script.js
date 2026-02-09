@@ -31,8 +31,8 @@ function respond(isJoin) {
     }
 
     message.textContent = isJoin
-        ? "Hẹn gặp bạn hôm đó nha 💖"
-        : "Bạn đã nhận lời mời thành công (ง •_•)ง";
+        ? "Hẹn gặp hôm đó nhaaa 💖"
+        : "Coi như đồng ý đến chụp nha (ง •_•)ง";
 
     message.classList.add("show");
 
