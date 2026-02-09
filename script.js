@@ -21,38 +21,50 @@ setInterval(() => {
 }, 1000);
 
 
+/* ================= HIỆU ỨNG RƠI LIÊN TỤC ================= */
+const container = document.querySelector(".falling-container");
+
+// rơi nền nhẹ, chạy mãi
+setInterval(() => {
+    createEffect(["✨", "🌸"], 6, 5);
+}, 600);
+
+
 /* ================= PHẢN HỒI LỜI MỜI ================= */
 function respond(isJoin) {
     const message = document.getElementById("message");
     const rejectBtn = document.getElementById("rejectBtn");
 
     if (!isJoin && rejectBtn) {
-        rejectBtn.remove(); // ẩn nút từ chối
+        rejectBtn.remove();
     }
 
     message.textContent = isJoin
-        ? "Hẹn gặp hôm đó nhaaa 💖"
-        : "Coi như đồng ý đến chụp nha (ง •_•)ง";
+        ? "Hẹn gặp hôm đó nha 💖"
+        : "Coi như m đồng ý nha （￣︶￣）↗　";
 
-    message.classList.add("show");
-
-    launchEffect();
+    // hiệu ứng riêng cho từng lựa chọn
+    if (isJoin) {
+        createEffect(["🎉", "✨", "💖"], 50, 3);
+    } else {
+        createEffect(["😭", "😶", "😡"], 30, 6);
+    }
 }
 
 
-/* ================= HIỆU ỨNG (DÙNG CHUNG) ================= */
-function launchEffect() {
-    const container = document.querySelector(".falling-container");
-
-    for (let i = 0; i < 25; i++) {
+/* ================= HÀM TẠO HIỆU ỨNG ================= */
+function createEffect(emojis, amount, maxDuration) {
+    for (let i = 0; i < amount; i++) {
         const item = document.createElement("span");
-        item.textContent = ["🎉", "✨", "🌸", "💖"][Math.floor(Math.random() * 4)];
+        item.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
         item.style.left = Math.random() * 100 + "vw";
-        item.style.animationDuration = 2 + Math.random() * 2 + "s";
+        item.style.fontSize = 14 + Math.random() * 14 + "px";
+        item.style.animationDuration =
+            2 + Math.random() * maxDuration + "s";
 
         container.appendChild(item);
 
-        setTimeout(() => item.remove(), 4000);
+        setTimeout(() => item.remove(), 8000);
     }
 }
